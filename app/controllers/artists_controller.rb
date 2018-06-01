@@ -5,11 +5,11 @@ class ArtistController < ApplicationController
   end
 
   def new
-
+    @artist = Artist.find(params[:id])
   end
 
   def edit
-
+    @artist = Artist.find(params[:id])
   end
 
   def create
