@@ -19,6 +19,14 @@ class ArtistController < ApplicationController
   end
 
   def update
+    @artist = Artist.find(params[:id])
+    @artist.update(post_params)
+    redirect_to artist_path(@artist)
+  end
 
+  private
+
+  def post_params
+    params.require(:artist).permit(:name, :bio)
   end
 end
