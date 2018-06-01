@@ -1,11 +1,15 @@
 class GenreController < ApplicationController
 
+  def index
+    @genres = Genre.all
+  end
+
   def show
     @genre = Genre.find(params[:id])
   end
 
   def new
-    @genre = Genre.find(params[:id])
+    @genre = Genre.new
   end
 
   def edit
