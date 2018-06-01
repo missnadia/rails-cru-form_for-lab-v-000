@@ -1,7 +1,11 @@
 class SongController < ApplicationController
 
-  def show
+  def index
 
+  end
+  
+  def show
+    @songs
   end
 
   def new
